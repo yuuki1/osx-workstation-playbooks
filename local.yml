@@ -6,7 +6,5 @@
     - osx-defaults
     - osx-apps
     - laptop-keyboard
-    - rubyist
+    - ruby
     - perl
-    - nodejs
-    - vim

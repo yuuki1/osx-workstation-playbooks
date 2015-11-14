@@ -1,20 +1,19 @@
 ---
--
-  name: Install plenv
+- name: Install plenv
   git:
     depth=1
     dest="{{ plenv.dest }}"
     recursive=no
     repo="{{ plenv.repo }}"
--
-  name: Install perl-build
+
+- name: Install perl-build
   git:
     depth=1
     dest="{{ perl_build.dest }}"
     recursive=no
     repo="{{ perl_build.repo }}"
--
-  name: Install Perls
+
+- name: Install Perls
   command: "{{ plenv.dest }}/bin/plenv install {{ item.version }}"
   args:
     creates: "{{ plenv.dest }}/versions/{{ item.version }}"

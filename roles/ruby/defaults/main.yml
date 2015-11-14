@@ -9,13 +9,8 @@ executable:
   rbenv: "{{ rbenv.dest }}/bin/rbenv"
 ruby:
   dependencies:
-    -
-      name: gdbm
-    -
-      name: libyaml
-    -
-      name: libffi
-    -
-      name: openssl
-    -
-      name: readline
+    - name: gdbm
+    - name: libyaml
+    - name: libffi
+    - name: openssl
+    - name: readline

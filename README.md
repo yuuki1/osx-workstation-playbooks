@@ -9,6 +9,12 @@ Ansible playbooks for Mac OS X workstation
 * [Install Xcode (with Command Line Tools)](https://developer.apple.com/downloads)
 * [Install Ansible](http://docs.ansible.com/intro_installation.html)
 
+### Clone
+
+```
+git clone git@github.com:yuuki1/osx-workstation-playbooks.git ~/src/github.com/yuuki1/osx-workstation-playbooks
+```
+
 ### Run at local
 
 ```

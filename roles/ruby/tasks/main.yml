@@ -1,27 +1,26 @@
 ---
--
-  name: Install rbenv
+- name: Install rbenv
   git:
     depth=1
     dest="{{ rbenv.dest }}"
     recursive=no
     repo="{{ rbenv.repo }}"
--
-  name: Install ruby-build
+
+- name: Install ruby-build
   git:
     depth=1
     dest="{{ ruby_build.dest }}"
     recursive=no
     repo="{{ ruby_build.repo }}"
--
-  name: Install Ruby's dependencies
+
+- name: Install Ruby's dependencies
   homebrew:
     name="{{ item.name }}"
     state="{{ item.state | default('present') }}"
     install_options="{{ item.install_options | default('') }}"
   with_items: ruby.dependencies
--
-  name: Install Rubies
+
+- name: Install Rubies
   command: "{{ rbenv.dest }}/bin/rbenv install --keep {{ item.version }}"
   args:
     creates: "{{ rbenv.dest }}/versions/{{ item.version }}"

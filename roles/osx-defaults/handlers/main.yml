@@ -3,3 +3,5 @@
   command: killall Dock
 - name: restart Finder
   command: killall Finder
+- name: restart SystemUIServer
+  command: killall SystemUIServer

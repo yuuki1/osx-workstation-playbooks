@@ -1,100 +1,88 @@
 ---
-computer_name: Hortensia
-local_host_name: Hortensia
+computer_name: yuuki
+local_host_name: yuuki
+playbook_path: "{{ ansible_env.HOME }}/src/github.com/yuuki1/osx-workstation-playbooks"
 karabiner:
-  source_private_xml: '{{ dotfiles.dest }}/osx/keyremap4macbook/private.xml'
   config_dir: "{{ ansible_env.HOME }}/Library/Application Support/Karabiner"
   command: /Applications/Karabiner.app/Contents/Library/bin/karabiner
   config:
-    -
-      name: notsave.automatically_enable_keyboard_device
+    - name: notsave.automatically_enable_keyboard_device
       value: 1
-    -
-      name: notsave.automatically_enable_pointing_device
+    - name: notsave.automatically_enable_pointing_device
       value: 1
-    -
-      name: option.emacsmode_controlM
+    - name: remap.swapcolons
       value: 1
-    -
-      name: org.aereal.limechat.move-to-previous-unread-channel
+    - name: repeat.initial_wait
+      value: 0
+    - name: repeat.wait
+      value: 0
+    - name: remap.jis_command2eisuukana_prefer_command
       value: 1
-    -
-      name: org.aereal.limechat.move-down-channel
-      value: 1
-    -
-      name: org.aereal.limechat.move-up-channel
-      value: 1
-    -
-      name: org.aereal.limechat.move-to-next-unread-channel
-      value: 1
-    -
-      name: org.aereal.sequel-pro.remap-c-h-to-delete
-      value: 1
-    -
-      name: remap.space2shiftL_space_keyrepeat
-      value: 1
-    -
-      name: remap.swapcolons
-      value: 1
-    -
-      name: repeat.initial_wait
-      value: 200
-    -
-      name: repeat.wait
-      value: 35
 homebrew:
   repo: git://github.com/homebrew/Homebrew.git
   dest: /opt/homebrew
   packages:
-    -
-      name: coreutils
-    -
-      name: direnv
-    -
-      name: git
+    - name: coreutils
+    - name: direnv
+    - name: git
       install_options: --with-brewed-openssl --with-pcre
-    -
-      name: jq
-    -
-      name: pstree
-    -
-      name: reattach-to-user-namespace
+    - name: jq
+    - name: pstree
+    - name: reattach-to-user-namespace
       install_options: --with-launchctl --with-pbcopy-and-pbpaste
-    -
-      name: ssh-copy-id
-    -
-      name: terminal-notifier
-    -
-      name: the_silver_searcher
-    -
-      name: tig
-    -
-      name: tmux
-    -
-      name: wget
-    -
-      name: zsh
+    - name: ssh-copy-id
+    - name: terminal-notifier
+    - name: the_silver_searcher
+    - name: tig
+    - name: tmux
+    - name: tmux-cssh
+    - name: wget
+    - name: ghq
+    - name: zsh
       install_options: --disable-etcdir
     - name: autossh
     - name: hub
-    - name: proctools
+    - name: unzip
+    - name: openssh
+    - name: go
+    - name: ab
+    - name: parallel
+    - name: postgresql
+    - name: mysql
+    - name: docker
+    - name: docker-machine
+    - name: docker-compose
+    - name: peco
 osx_apps:
   casks:
     - name: alfred
     - name: dropbox
+    - name: firefox
+    - name: google-chrome
     - name: iterm2
-    - name: slate
     - name: karabiner
+    - name: kobito
+    - name: limechat
+    - name: macvim-kaoriya
+    - name: smcfancontrol
+    - name: seil
+    - name: slack
+    - name: skype
+    - name: spark
+    - name: twitter
     - name: xquartz
     - name: virtualbox
-    - name: boot2docker
-    - name: smcfancontrol
+    - name: zoom
 ruby_versions:
-  - version: 2.2.0
+  - version: 2.2.3
+  - version: 2.1.7
+  - version: 2.1.5
+  - version: 2.0.0-p647
 perl_versions:
-  - version: 5.20.1
-node_versions:
-  - version: 0.10.33
+  - version: 5.22.0
+  - version: 5.20.3
+  - version: 5.18.2
+  - version: 5.14.2
 dotfiles:
-  dest: ~/repos/github.com/aereal/dotfiles
-  repo: git://github.com/aereal/dotfiles.git
+  dest: ~/repos/github.com/yuuki1/dotfiles
+  repo: git://github.com/yuuki1/dotfiles.git

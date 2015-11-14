@@ -1,21 +1,19 @@
 ---
--
-  name: Tap Homebrew Cask
-  homebrew_tap: name=caskroom/cask
+- name: Install Homebrew Cask
+  homebrew: name=caskroom/cask/brew-cask
   environment:
     PATH: "{{ homebrew.dest }}/bin:{{ ansible_env.PATH }}"
--
-  name: Install Homebrew Cask
-  homebrew: name=brew-cask
-  environment:
-    PATH: "{{ homebrew.dest }}/bin:{{ ansible_env.PATH }}"
--
-  name: Install Casks
+
+- name: Tap caskroom/versions
+  homebrew_tap: tap=caskroom/versions
+
+- name: Install Casks
   homebrew_cask:
     name="{{ item.name }}"
   with_items: osx_apps.casks
+  ignore_errors: yes
   environment:
     PATH: "{{ homebrew.dest }}/bin:{{ ansible_env.PATH }}"
--
-  name: Setup Casks
+
+- name: Setup Casks
   command: "{{ homebrew.dest }}/bin/brew cask alfred link"

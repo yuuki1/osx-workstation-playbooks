@@ -56,6 +56,7 @@ homebrew:
     - name: gnu-time
     - name: gnu-which
     - name: proxychains-ng
+    - name: shellcheck
 osx_apps:
   casks:
     - name: alfred

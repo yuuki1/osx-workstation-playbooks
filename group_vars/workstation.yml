@@ -87,5 +87,5 @@ perl_versions:
   - version: 5.18.2
   - version: 5.14.2
 dotfiles:
-  dest: ~/repos/github.com/yuuki1/dotfiles
+  dest: ~/src/github.com/yuuki1/dotfiles
   repo: git://github.com/yuuki1/dotfiles.git

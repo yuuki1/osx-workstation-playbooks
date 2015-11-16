@@ -34,6 +34,8 @@
 
 - name: Link brewed applications
   command: "{{ homebrew.dest }}/bin/brew linkapps"
+  environment:
+    PATH: "{{ homebrew.dest }}/bin:{{ ansible_env.PATH }}"
 
 - name: Fetch dotfiles
   git:

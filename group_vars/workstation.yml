@@ -42,10 +42,8 @@ homebrew:
       install_options: --disable-etcdir
     - name: autossh
     - name: hub
-    - name: unzip
     - name: openssh
     - name: go
-    - name: ab
     - name: parallel
     - name: postgresql
     - name: mysql
@@ -53,6 +51,11 @@ homebrew:
     - name: docker-machine
     - name: docker-compose
     - name: peco
+    - name: gnu-tar
+    - name: gnu-sed
+    - name: gnu-time
+    - name: gnu-which
+    - name: proxychains-ng
 osx_apps:
   casks:
     - name: alfred

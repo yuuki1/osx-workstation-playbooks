@@ -22,6 +22,11 @@
     accept_hostkey=yes
   when: homebrew_install.stat.isdir is not defined or not homebrew_install.stat.isdir
 
+- name: Tap homebrew/dupes
+  homebrew_tap: tap=homebrew/dupes
+  environment:
+    PATH: "{{ homebrew.dest }}/bin:{{ ansible_env.PATH }}"
+
 - name: Install essential packages from Homebrew
   homebrew:
     name="{{ item.name }}"

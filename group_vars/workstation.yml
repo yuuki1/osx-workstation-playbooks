@@ -24,6 +24,7 @@ homebrew:
   packages:
     - name: coreutils
     - name: direnv
+    - name: findutils
     - name: git
       install_options: --with-brewed-openssl --with-pcre
     - name: jq

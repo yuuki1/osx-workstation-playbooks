@@ -72,7 +72,6 @@ osx_apps:
     - name: slack
     - name: skype
     - name: spark
-    - name: twitter
     - name: xquartz
     - name: virtualbox
     - name: zoom

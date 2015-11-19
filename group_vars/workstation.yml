@@ -59,6 +59,7 @@ homebrew:
     - name: proxychains-ng
     - name: shellcheck
     - name: make
+    - name: ansible
 osx_apps:
   casks:
     - name: alfred

@@ -58,6 +58,7 @@ homebrew:
     - name: gnu-which
     - name: proxychains-ng
     - name: shellcheck
+    - name: make
 osx_apps:
   casks:
     - name: alfred

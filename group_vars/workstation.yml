@@ -60,6 +60,7 @@ homebrew:
     - name: shellcheck
     - name: make
     - name: ansible
+    - name: vim
 osx_apps:
   casks:
     - name: alfred

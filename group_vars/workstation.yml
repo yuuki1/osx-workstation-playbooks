@@ -61,6 +61,9 @@ homebrew:
     - name: make
     - name: ansible
     - name: vim
+    - name: scala
+    - name: sbt
+    - name: wireshark
 osx_apps:
   casks:
     - name: alfred

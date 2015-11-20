@@ -64,6 +64,7 @@ homebrew:
     - name: scala
     - name: sbt
     - name: wireshark
+    - name: redis
 osx_apps:
   casks:
     - name: alfred

@@ -65,6 +65,7 @@ homebrew:
     - name: sbt
     - name: wireshark
     - name: redis
+    - name: awscli
 osx_apps:
   casks:
     - name: alfred

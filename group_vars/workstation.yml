@@ -66,6 +66,7 @@ homebrew:
     - name: wireshark
     - name: redis
     - name: awscli
+    - name: mercurial
 osx_apps:
   casks:
     - name: alfred

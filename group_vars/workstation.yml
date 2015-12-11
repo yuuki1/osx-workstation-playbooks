@@ -67,6 +67,8 @@ homebrew:
     - name: redis
     - name: awscli
     - name: mercurial
+    - name: openssl
+    - name: htop
 osx_apps:
   casks:
     - name: alfred
